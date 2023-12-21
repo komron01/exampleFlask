@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page!</h1>
+    
+    <p>Data from PostgreSQL table:</p>
+    <ul>
+        {% for row in postgres_data %}
+            <li>{{ row }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Click the button below to go to the Registration Page:</p>
+    
+    <!-- Add a button to navigate to the registration page -->
+    <form action="/registration">
+        <input type="submit" value="Go to Registration">
+    </form>
+</body>
+</html>
